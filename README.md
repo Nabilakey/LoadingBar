@@ -1,37 +1,123 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<title>ITK</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+}
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+</style>
+<body class="w3-light-grey">
 
-You can use the [editor on GitHub](https://github.com/Nabilakey/LoadingBar/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  <!-- The Grid -->
+  <div class="w3-row-padding">
 
-### Markdown
+    <!-- Left Column -->
+    <div class="w3-third">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="itk.png" style="width:100%" alt="Avatar">
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>College</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Balikpapan, Indonesia</p>
+          <hr>
 
-```markdown
-Syntax highlighted code block
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>What we do ?</b></p>
+          <p>Education</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">100%</div>
+          </div>
+          <p>Research</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+          <p>Community Service</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
+          </div>
+          <br>
+        </div>
+      </div><br>
 
-# Header 1
-## Header 2
-### Header 3
+    <!-- End Left Column -->
+    </div>
 
-- Bulleted
-- List
+    <!-- Right Column -->
+    <div class="w3-twothird">
 
-1. Numbered
-2. List
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Institut Teknologi Kalimantan</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>History</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - <span class="w3-tag w3-teal w3-round">Now</span></h6>
+          <p>Institut Teknologi Kalimantan telah ada sejak 2012, namun saat itu belum memiliki bangunan kampus. Sehingga mahasiswa kami berkuliah di ITS</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>The Buildings</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015</h6>
+          <p>Pada pendaftaran mahasiswa angkatan 2015 berdirilah gedung pertama ITK</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Student</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012-2017</h6>
+          <p>Dari semenjak berdiri hingga sekarang, mahasiswa yang berkuliah di ITK mencapai hampir 2000 mahasiswa.</p><br>
+        </div>
+      </div>
 
-**Bold** and _Italic_ and `Code` text
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Go to our website?</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b></b></h5>
+          <p><div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+          <br>
+          <button onclick="move()">Click Me</button></p>
+          <script>
+          function move() {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 100) {
+                clearInterval(id);
+                window.location ="http://itk.ac.id/";
+              } else {
+                width++;
+                elem.style.width = width + '%';
+              }
+            }
+          }
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-[Link](url) and ![Image](src)
-```
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+</footer>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Nabilakey/LoadingBar/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</body>
+</html>
